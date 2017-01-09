@@ -1,0 +1,33 @@
+﻿<div>
+	<form #formTodo="ngForm" (ngSubmit)="addTodo(formTodo)" novalidate>
+		<div role="alert" *ngIf="formTodo.submitted && !formTodo.hasValid">Invalid!</div>
+		<label>
+			<span class="blind">Add an item</span>
+			<input type="text" [(ngModel)]="model.title" name="title" placeholder="Add an task..." required>
+		</label>
+		<button type="submit" aria-label="Submit" [disabled]="formTodo.loading">
+			<span *ngIf="!formTodo.loading">Submit</span>
+			<span aria-busy="true" *ngIf="formTodo.loading">Loading...</span>
+		</button>
+
+	</form>
+</div>
+
+<ul>
+	<li *ngFor="let todo of todoes">
+		<label>
+			<input type="checkbox" aria-label="Mark as complete" title="Mark as complete" [(ngModel)]="todo.completed" [checked]="todo.completed" (change)="completeTodo(todo)">
+			<span *ngIf="!todo.completed">{{todo.title}}</span>
+			<del *ngIf="todo.completed">{{todo.title}}</del>
+		</label>
+		<button type="button" (click)="removeTodo(todo)" title="Task to delete">Delete</button>
+	</li>
+</ul>
+
+<pre><code><strong>Form data: </strong><br>
+submitted: {{formTodo.submitted}},
+loading: {{formTodo.loading}},
+hasValid: {{formTodo.hasValid}},
+valid: {{formTodo.valid}},
+value: {{formTodo.value | json}}
+</code></pre>

@@ -1,0 +1,22 @@
+﻿<#@ template debug="false" hostspecific="True" language="C#" #>
+<#@ assembly name="$(TargetDir)TypeLite.dll" #>
+<#@ assembly name="$(TargetDir)TypeLite.Net4.dll" #>
+<#@ assembly name="$(TargetDir)src.Models.dll" #>
+
+<#@ import namespace="TypeLite" #>
+<#@ import namespace="TypeLite.Net4" #>
+<#@output extension=".d.ts"#>
+
+<#@include file="Manager.ttinclude"#>
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+
+<# var ts = TypeScript.Definitions()
+	.For<src.Models.Todo>()
+	;
+#>
+
+<#= ts.Generate(TsGeneratorOutput.Properties) #>
+
+<#= ts.Generate(TsGeneratorOutput.Enums) #>
+<# manager.EndBlock(); #>
+<# manager.Process(true); #>
