@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Newtonsoft.Json;
-using src.API;
 using src.DAL;
 using src.Models;
 
