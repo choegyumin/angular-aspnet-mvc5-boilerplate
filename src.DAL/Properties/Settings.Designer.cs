@@ -26,12 +26,11 @@ namespace src.DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ApplicationDbContext-boilerpla" +
-            "te;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertific" +
-            "ate=True")]
-        public string ApplicationDbContext_boilerplateConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ApplicationDbContext;Integrate" +
+            "d Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True")]
+        public string ApplicationDbContextConnectionString {
             get {
-                return ((string)(this["ApplicationDbContext_boilerplateConnectionString"]));
+                return ((string)(this["ApplicationDbContextConnectionString"]));
             }
         }
     }

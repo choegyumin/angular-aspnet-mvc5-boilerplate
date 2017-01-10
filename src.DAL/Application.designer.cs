@@ -22,8 +22,8 @@ namespace src.DAL
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ApplicationDbContext-boilerplate")]
-	public partial class MainDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ApplicationDbContext")]
+	public partial class ApplicationDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace src.DAL
     partial void DeleteTodoes(Todoes instance);
     #endregion
 		
-		public MainDataContext() : 
-				base(global::src.DAL.Properties.Settings.Default.ApplicationDbContext_boilerplateConnectionString, mappingSource)
+		public ApplicationDataContext() : 
+				base(global::src.DAL.Properties.Settings.Default.ApplicationDbContextConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public MainDataContext(string connection) : 
+		public ApplicationDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public MainDataContext(System.Data.IDbConnection connection) : 
+		public ApplicationDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public MainDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ApplicationDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public MainDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ApplicationDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
