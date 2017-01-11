@@ -5,9 +5,9 @@
 
 declare module src.Models {
 	interface Todo {
-		completed: boolean;
-		id: number;
-		title: string;
+		Completed: boolean;
+		Id: number;
+		Title: string;
 	}
 }
 

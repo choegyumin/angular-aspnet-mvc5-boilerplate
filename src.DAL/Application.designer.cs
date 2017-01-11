@@ -80,22 +80,22 @@ namespace src.DAL
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id;
+		private int _Id;
 		
-		private string _title;
+		private string _Title;
 		
-		private bool _completed;
+		private bool _Completed;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OntitleChanging(string value);
-    partial void OntitleChanged();
-    partial void OncompletedChanging(bool value);
-    partial void OncompletedChanged();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnCompletedChanging(bool value);
+    partial void OnCompletedChanged();
     #endregion
 		
 		public Todoes()
@@ -103,62 +103,62 @@ namespace src.DAL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
 		{
 			get
 			{
-				return this._id;
+				return this._Id;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._Id != value))
 				{
-					this.OnidChanging(value);
+					this.OnIdChanging(value);
 					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string title
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Title
 		{
 			get
 			{
-				return this._title;
+				return this._Title;
 			}
 			set
 			{
-				if ((this._title != value))
+				if ((this._Title != value))
 				{
-					this.OntitleChanging(value);
+					this.OnTitleChanging(value);
 					this.SendPropertyChanging();
-					this._title = value;
-					this.SendPropertyChanged("title");
-					this.OntitleChanged();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_completed", DbType="Bit NOT NULL")]
-		public bool completed
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Completed", DbType="Bit NOT NULL")]
+		public bool Completed
 		{
 			get
 			{
-				return this._completed;
+				return this._Completed;
 			}
 			set
 			{
-				if ((this._completed != value))
+				if ((this._Completed != value))
 				{
-					this.OncompletedChanging(value);
+					this.OnCompletedChanging(value);
 					this.SendPropertyChanging();
-					this._completed = value;
-					this.SendPropertyChanged("completed");
-					this.OncompletedChanged();
+					this._Completed = value;
+					this.SendPropertyChanged("Completed");
+					this.OnCompletedChanged();
 				}
 			}
 		}

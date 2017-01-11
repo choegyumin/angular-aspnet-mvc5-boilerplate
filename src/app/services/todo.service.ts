@@ -24,12 +24,12 @@ export class TodoService {
 	}
 
 	update(todo: src.Models.Todo) {
-		return this.http.put('/api/Todoes/' + todo.id, todo, this.requestOptions)
+		return this.http.put('/api/Todoes/' + todo.Id, todo, this.requestOptions)
 			.map((response: Response) => response.json());
 	}
 
-	delete(id: number) {
-		return this.http.delete('/api/Todoes/' + id, this.requestOptions)
+	delete(Id: number) {
+		return this.http.delete('/api/Todoes/' + Id, this.requestOptions)
 			.map((response: Response) => response.json());
 	}
 }

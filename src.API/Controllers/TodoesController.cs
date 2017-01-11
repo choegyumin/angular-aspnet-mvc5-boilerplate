@@ -27,14 +27,14 @@ namespace src.API.Controllers
 
 			Todoes todoData = new Todoes
 			{
-				title = todo.title,
-				completed = todo.completed
+				Title = todo.Title,
+				Completed = todo.Completed
 			};
 
 			db.Todoes.InsertOnSubmit(todoData);
 			db.SubmitChanges();
 
-			return CreatedAtRoute("DefaultApi", new { id = todoData.id }, todoData);
+			return CreatedAtRoute("DefaultApi", new { Id = todoData.Id }, todoData);
 		}
 
 		// [readAll] GET: api/Todoes
@@ -45,27 +45,27 @@ namespace src.API.Controllers
 
 		// [update] PUT: api/Todoes/5
 		[ResponseType(typeof(void))]
-		public IHttpActionResult PutTodo(int id, Todo todo)
+		public IHttpActionResult PutTodo(int Id, Todo todo)
 		{
 			if (!ModelState.IsValid)
 			{
 				return BadRequest(ModelState);
 			}
 
-			if (id != todo.id)
+			if (Id != todo.Id)
 			{
 				return BadRequest();
 			}
 
-			Todoes todoData = db.Todoes.Where(row => row.id == id).SingleOrDefault();
+			Todoes todoData = db.Todoes.Where(row => row.Id == Id).SingleOrDefault();
 
 			if (todoData == null)
 			{
 				return NotFound();
 			}
 
-			todoData.title = todo.title;
-			todoData.completed = todo.completed;
+			todoData.Title = todo.Title;
+			todoData.Completed = todo.Completed;
 			db.SubmitChanges();
 
 			return Ok(todoData);
@@ -73,10 +73,10 @@ namespace src.API.Controllers
 
 		// [delete] DELETE: api/Todoes/5
 		[ResponseType(typeof(Todo))]
-		public IHttpActionResult DeleteTodo(int id)
+		public IHttpActionResult DeleteTodo(int Id)
 		{
-			//var todoData = db.Todoes.Where(row => row.id == id); // Multiple
-			Todoes todoData = db.Todoes.Where(row => row.id == id).SingleOrDefault();
+			//var todoData = db.Todoes.Where(row => row.Id == Id); // Multiple
+			Todoes todoData = db.Todoes.Where(row => row.Id == Id).SingleOrDefault();
 
 			if (todoData == null)
 			{

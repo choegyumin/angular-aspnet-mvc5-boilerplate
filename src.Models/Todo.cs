@@ -7,10 +7,10 @@ namespace src.Models
 {
 	public class Todo
 	{
-		public int id { get; set; }
+		public int Id { get; set; }
 		[Required]
-		public string title { get; set; }
+		public string Title { get; set; }
 		[Required]
-		public bool completed { get; set; }
+		public bool Completed { get; set; }
 	}
 }

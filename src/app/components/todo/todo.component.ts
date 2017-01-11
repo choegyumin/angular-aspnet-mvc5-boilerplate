@@ -38,7 +38,7 @@ export class TodoComponent {
 		formData.loading = true;
 
 		let todo: src.Models.Todo = formData.value;
-		todo.completed = false;
+		todo.Completed = false;
 
 		this.todoService.create(todo).subscribe(
 			data => {
@@ -61,7 +61,7 @@ export class TodoComponent {
 	}
 
 	removeTodo(todo: src.Models.Todo) {
-		this.todoService.delete(todo.id).subscribe(
+		this.todoService.delete(todo.Id).subscribe(
 			() => {
 				this.loadAllTodoes();
 			});
