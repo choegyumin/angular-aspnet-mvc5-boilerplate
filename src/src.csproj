@@ -217,8 +217,6 @@
     <Content Include="app\containers\error\error.container.html" />
     <Content Include="app\containers\home\home.container.html" />
     <Content Include="Content\style.css" />
-    <Content Include="Content\Sass\tools\_functions.scss" />
-    <Content Include="Content\Sass\tools\_mixins.scss" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="karma-test-shim.js" />
@@ -286,6 +284,7 @@
     <Folder Include="Content\Sass\generic\" />
     <Folder Include="Content\Sass\objects\" />
     <Folder Include="Content\Sass\settings\" />
+    <Folder Include="Content\Sass\tools\" />
     <Folder Include="Content\Sass\trumps\" />
     <Folder Include="Content\Sprites\" />
     <Folder Include="Fonts\" />
