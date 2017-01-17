@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Newtonsoft.Json;
@@ -16,7 +17,7 @@ namespace src.API.Controllers
 	{
 		private ApplicationDataContext db = new ApplicationDataContext();
 
-		// [create] POST: api/Todoes
+		/// <summary> [create] POST: api/Todoes </summary>
 		[ResponseType(typeof(Todo))]
 		public IHttpActionResult PostTodo(Todo todo)
 		{
@@ -37,13 +38,13 @@ namespace src.API.Controllers
 			return CreatedAtRoute("DefaultApi", new { Id = todoData.Id }, todoData);
 		}
 
-		// [readAll] GET: api/Todoes
+		/// <summary> [readAll] GET: api/Todoes </summary>
 		public List<Todoes> GetTodoes()
 		{
 			return db.Todoes.ToList();
 		}
 
-		// [update] PUT: api/Todoes/5
+		/// <summary> [update] PUT: api/Todoes/5 </summary>
 		[ResponseType(typeof(void))]
 		public IHttpActionResult PutTodo(int Id, Todo todo)
 		{
@@ -71,7 +72,7 @@ namespace src.API.Controllers
 			return Ok(todoData);
 		}
 
-		// [delete] DELETE: api/Todoes/5
+		/// <summary> [delete] DELETE: api/Todoes/5 </summary>
 		[ResponseType(typeof(Todo))]
 		public IHttpActionResult DeleteTodo(int Id)
 		{
