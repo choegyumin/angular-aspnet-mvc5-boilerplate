@@ -1,13 +1,13 @@
 ﻿<div>
-	<form #formTodo="ngForm" (ngSubmit)="addTodo(formTodo)" novalidate>
-		<div role="alert" *ngIf="formTodo.submitted && !formTodo.hasValid">Invalid!</div>
+	<form #todoForm="ngForm" (ngSubmit)="addTodo(todoForm)" novalidate>
+		<div role="alert" *ngIf="todoForm.submitted && !todoForm.hasValid">Invalid!</div>
 		<label>
 			<span class="blind">Add an item</span>
 			<input type="text" [(ngModel)]="model.Title" name="Title" placeholder="Add an task..." required>
 		</label>
-		<button type="submit" aria-label="Submit" [disabled]="formTodo.loading">
-			<span *ngIf="!formTodo.loading">Submit</span>
-			<span aria-busy="true" *ngIf="formTodo.loading">Loading...</span>
+		<button type="submit" aria-label="Submit" [disabled]="todoForm.loading">
+			<span *ngIf="!todoForm.loading">Submit</span>
+			<span aria-busy="true" *ngIf="todoForm.loading">Loading...</span>
 		</button>
 
 	</form>
@@ -25,9 +25,9 @@
 </ul>
 
 <pre><code><strong>Form data: </strong><br>
-submitted: {{formTodo.submitted}},
-loading: {{formTodo.loading}},
-hasValid: {{formTodo.hasValid}},
-valid: {{formTodo.valid}},
-value: {{formTodo.value | json}}
+submitted: {{todoForm.submitted}},
+loading: {{todoForm.loading}},
+hasValid: {{todoForm.hasValid}},
+valid: {{todoForm.valid}},
+value: {{todoForm.value | json}}
 </code></pre>
