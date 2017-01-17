@@ -216,7 +216,7 @@
     <Content Include="app\components\todo\todo.component.html" />
     <Content Include="app\containers\error\error.container.html" />
     <Content Include="app\containers\home\home.container.html" />
-    <Content Include="Content\example.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\Sass\tools\_functions.scss" />
     <Content Include="Content\Sass\tools\_mixins.scss" />
     <Content Include="favicon.ico" />
