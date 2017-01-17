@@ -291,6 +291,10 @@
     <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\src.DAL\src.DAL.csproj">
+      <Project>{fa2651b6-fc6e-447a-a98f-7b582929d42f}</Project>
+      <Name>src.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\src.Models\src.Models.csproj">
       <Project>{d9be7415-b6b6-48eb-9247-4bccab4b20e1}</Project>
       <Name>src.Models</Name>

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{6312B6C4-BEF3-41B2-85FC-B39108CC8944}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FA2651B6-FC6E-447A-A98F-7B582929D42F} = {FA2651B6-FC6E-447A-A98F-7B582929D42F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src.API", "src.API\src.API.csproj", "{D8E2632A-272C-4636-908E-E65A6BD8C906}"
 EndProject
