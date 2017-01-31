@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -10,5 +10,13 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "compileOnSave": true
+  "compileOnSave": true,
+  "files": [
+    "app/app.module.ts",
+    "app/main.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "build",
+    "skipMetadataEmit": true
+  }
 }

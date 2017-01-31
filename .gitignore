@@ -288,14 +288,15 @@ __pycache__/
 # tools/
 
 # Angular2 app
-**/_temp
-**/_test-output
-**/app/**/*.js
-**/e2e/**/*.js
+_temp/
+_test-output/
+src/aot/
+src/app/**/*.js
+src/bundles/
+src/build/
+src/dist/
+src/e2e/**/*.js
 link-checker-results.txt
 
 # Typescript
-**/typings/
-
-# Others
-src/bundles/**/*
+typings/

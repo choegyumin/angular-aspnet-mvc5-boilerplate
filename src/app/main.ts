@@ -1,5 +1,6 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+/// <reference path="../Scripts/TypeLite.Net4.d.ts" />
 
-import { AppModule } from './app.module';
+import { platformBrowser } from '@angular/platform-browser';
+import { AppModuleNgFactory } from '../build/app/app.module.ngfactory';
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

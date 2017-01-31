@@ -217,6 +217,7 @@
     <Content Include="app\containers\error\error.container.html" />
     <Content Include="app\containers\home\home.container.html" />
     <Content Include="Content\style.css" />
+    <Content Include="copy-dist-files.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="karma-test-shim.js" />
@@ -226,6 +227,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="protractor.config.js" />
+    <Content Include="rollup-config.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
     <Content Include="Scripts\jquery-1.12.4.min.map" />
@@ -245,7 +247,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TypeLite.Net4.d.ts</LastGenOutput>
     </Content>
-    <Content Include="systemjs.config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="Views\Home\Index.cshtml" />

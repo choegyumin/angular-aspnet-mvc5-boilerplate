@@ -12,15 +12,12 @@
 	<!-- Polyfill(s) for older browsers -->
 	<script src="node_modules/core-js/client/shim.min.js"></script>
 	<script src="node_modules/zone.js/dist/zone.js"></script>
-	<script src="node_modules/systemjs/dist/system.src.js"></script>
-	<!-- Configure SystemJS -->
-	<script src="systemjs.config.js"></script>
-	<script>
-		System.import('app').catch(function (err) { console.error(err); });
-	</script>
+	<!-- Configure Angular2 -->
+	<script>window.module = 'build';</script>
 </head>
 <body>
 	@RenderBody()
+	<script src="dist/build.js"></script>
 	@RenderSection("scripts", required: false)
 </body>
 </html>
