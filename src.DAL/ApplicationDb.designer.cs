@@ -23,7 +23,7 @@ namespace src.DAL
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ApplicationDbContext")]
-	public partial class ApplicationDataContext : System.Data.Linq.DataContext
+	public partial class ApplicationDbDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace src.DAL
     partial void DeleteTodoes(Todoes instance);
     #endregion
 		
-		public ApplicationDataContext() : 
+		public ApplicationDbDataContext() : 
 				base(global::src.DAL.Properties.Settings.Default.ApplicationDbContextConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ApplicationDataContext(string connection) : 
+		public ApplicationDbDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ApplicationDataContext(System.Data.IDbConnection connection) : 
+		public ApplicationDbDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ApplicationDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ApplicationDbDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ApplicationDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ApplicationDbDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

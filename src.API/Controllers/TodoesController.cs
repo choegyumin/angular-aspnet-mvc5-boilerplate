@@ -15,7 +15,7 @@ namespace src.API.Controllers
 {
 	public class TodoesController : ApiController
 	{
-		private ApplicationDataContext db = new ApplicationDataContext();
+		private ApplicationDbDataContext db = new ApplicationDbDataContext();
 
 		/// <summary> [create] POST: api/Todoes </summary>
 		[ResponseType(typeof(Todo))]

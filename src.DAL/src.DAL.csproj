@@ -69,10 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.designer.cs">
+    <Compile Include="ApplicationDb.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Application.dbml</DependentUpon>
+      <DependentUpon>ApplicationDb.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -104,9 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Application.dbml">
+    <None Include="ApplicationDb.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Application.designer.cs</LastGenOutput>
+      <LastGenOutput>ApplicationDb.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -116,8 +116,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Application.dbml.layout">
-      <DependentUpon>Application.dbml</DependentUpon>
+    <None Include="ApplicationDb.dbml.layout">
+      <DependentUpon>ApplicationDb.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
