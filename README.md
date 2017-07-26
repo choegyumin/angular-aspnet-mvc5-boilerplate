@@ -1,6 +1,6 @@
-# [aspnet-mvc5-angular2-boilerplate](https://github.com/choi4450/aspnet-mvc5-angular2-boilerplate)
+# [angular-aspnet-mvc5-boilerplate](https://github.com/choi4450/angular-aspnet-mvc5-boilerplate)
 
-ASP.NET MVC5 + RESTful API (Web API2) + Angular2 boilerplate
+Angular + ASP.NET MVC5 + RESTful API (Web API2) boilerplate
 
 ## Default Startup Project Preference
 
